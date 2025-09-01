@@ -1,0 +1,8 @@
+# IDE files
+.idea/
+
+# Data files
+data/
+
+# Output files
+out/
