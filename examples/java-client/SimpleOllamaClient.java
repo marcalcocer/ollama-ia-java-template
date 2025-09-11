@@ -37,10 +37,12 @@ public class SimpleOllamaClient {
     public static void main(String[] args) {
         try {
             long time = System.currentTimeMillis();
+            String model = args.length > 0 ? args[0] : "llama3";
+
             SimpleOllamaClient client = new SimpleOllamaClient("localhost", 11434);
 
             // Test the connection
-            String response = client.generate("llama3", "Hello, how are you?");
+            String response = client.generate(model, "Hello, how are you?");
             System.out.println("Response: " + response);
             System.out.println("Time taken: " + (System.currentTimeMillis() - time) + "ms");
 
