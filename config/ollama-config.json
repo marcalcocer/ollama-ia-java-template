@@ -1,0 +1,6 @@
+{
+    "num_parallel": 1,
+    "num_ctx": 2048,
+    "num_batch": 512,
+    "num_thread": 6
+}

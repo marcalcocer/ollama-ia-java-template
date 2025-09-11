@@ -6,6 +6,7 @@ services:
       - "11434:11434"
     volumes:
       - ollama-data:/root/.ollama
+      - ./config/ollama-config.json:/root/.ollama/config.json
     environment:
       - OLLAMA_HOST=0.0.0.0:11434
     restart: unless-stopped
