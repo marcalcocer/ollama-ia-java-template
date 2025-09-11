@@ -36,14 +36,16 @@ public class SimpleOllamaClient {
 
     public static void main(String[] args) {
         try {
+            long time = System.currentTimeMillis();
             SimpleOllamaClient client = new SimpleOllamaClient("localhost", 11434);
 
             // Test the connection
             String response = client.generate("llama3", "Hello, how are you?");
             System.out.println("Response: " + response);
+            System.out.println("Time taken: " + (System.currentTimeMillis() - time) + "ms");
 
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Error: " + e);
             System.out.println("Make sure Ollama is running and the model is downloaded.");
             System.out.println("Run: ./scripts/up.sh && ./scripts/pull-model.sh");
         }
